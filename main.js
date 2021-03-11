@@ -15,8 +15,8 @@ let config = {
     },
     scene: [
         new Ui(),
-        new TableauTiled("Tiled"),
         new TableauScrolling("Scrolling"),
+        new TableauTiled("Tiled"),
         new TableauZoo("Monstres"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
