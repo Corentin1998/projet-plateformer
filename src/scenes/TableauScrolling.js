@@ -9,20 +9,10 @@ class TableauScrolling extends Tableau{
         this.load.image('ciel', 'assets/ciel.png');
         this.load.image('plan-buisson', 'assets/plan-buisson.png');
         this.load.image('plan-buisson2', 'assets/plan-buisson2.png');
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.load.image('plan_troncs1', 'assets/plan_troncs1.png');
         this.load.image('plan_troncs2', 'assets/plan_troncs2.png');
         this.load.image('plan_troncs3', 'assets/plan_troncs3.png');
         this.load.image('plan_troncs4', 'assets/plan_troncs4.png');
-=======
-        this.load.image('plan-troncs', 'assets/plan-troncs.png');
-        this.load.image('plan-troncs2', 'assets/plan-troncs2.png');
->>>>>>> parent of d4d2529 (changements)
-=======
-        this.load.image('plan-troncs', 'assets/plan-troncs.png');
-        this.load.image('plan-troncs2', 'assets/plan-troncs2.png');
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
         this.load.image('plan-feuilleshaut', 'assets/plan-feuilleshaut.png');
 
         // Plateformes
@@ -127,8 +117,7 @@ class TableauScrolling extends Tableau{
         this.ciel.setOrigin(0,0);
         this.ciel.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         this.plan_troncs4=this.add.tileSprite(
             0,
             0,
@@ -137,7 +126,7 @@ class TableauScrolling extends Tableau{
             'plan_troncs4'
             );
         this.plan_troncs4.setScrollFactor(0);
-        this.plantroncs4.setOrigin(0,0);
+        this.plan_troncs4.setOrigin(0,0);
         this.plan_troncs4.alpha=1;
 
         this.plan_troncs3=this.add.tileSprite(
@@ -150,12 +139,8 @@ class TableauScrolling extends Tableau{
         this.plan_troncs3.setScrollFactor(0);
         this.plan_troncs3.setOrigin(0,0);
         this.plan_troncs3.alpha=1;
-=======
->>>>>>> parent of d4d2529 (changements)
-=======
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
 
-        this.plantroncs2=this.add.tileSprite(
+        this.plan_troncs2=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
@@ -168,41 +153,16 @@ class TableauScrolling extends Tableau{
         //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        this.plan_troncs=this.add.tileSprite(
-=======
-        this.plantroncs=this.add.tileSprite(
->>>>>>> parent of d4d2529 (changements)
-=======
-        this.plantroncs=this.add.tileSprite(
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
+        this.plan_troncs1=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-<<<<<<< HEAD
-<<<<<<< HEAD
             'plan_troncs1'
             );
         this.plan_troncs1.setScrollFactor(0);
         this.plan_troncs1.setOrigin(0,0);
         this.plan_troncs1.alpha=1;
-=======
-            'plan-troncs'
-            );
-        this.plantroncs.setScrollFactor(0);
-        this.plantroncs.setOrigin(0,0);
-        this.plantroncs.alpha=1;
->>>>>>> parent of d4d2529 (changements)
-=======
-            'plan-troncs'
-            );
-        this.plantroncs.setScrollFactor(0);
-        this.plantroncs.setOrigin(0,0);
-        this.plantroncs.alpha=1;
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
-
 
         this.planbuisson=this.add.tileSprite(
             0,
@@ -215,8 +175,6 @@ class TableauScrolling extends Tableau{
         this.planbuisson.setOrigin(0,0);
         this.planbuisson.alpha=1;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.planbuisson2=this.add.tileSprite(
             0,
             0,
@@ -227,10 +185,6 @@ class TableauScrolling extends Tableau{
         this.planbuisson2.setScrollFactor(0);
         this.planbuisson2.setOrigin(0,0);
         this.planbuisson2.alpha=1;
-=======
->>>>>>> parent of d4d2529 (changements)
-=======
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
 
         this.planfeuilleshaut=this.add.tileSprite(
             0,
@@ -257,8 +211,6 @@ class TableauScrolling extends Tableau{
         this.ciel.tilePositionY=this.cameras.main.scrollY*0.2;
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         this.plan_troncs4.tilePositionX=this.cameras.main.scrollX*0.3+300;
         this.plan_troncs4.tilePositionY=this.cameras.main.scrollY*0.5;
 
@@ -271,22 +223,11 @@ class TableauScrolling extends Tableau{
         this.planbuisson2.tilePositionX=this.cameras.main.scrollX*0.6+300;
         this.planbuisson2.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plan_troncs1.tilePositionX=this.cameras.main.scrollX*1+300;
+        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.3+200;
+        this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.plan_troncs1.tilePositionX=this.cameras.main.scrollX*0.6+500;
         this.plan_troncs1.tilePositionY=this.cameras.main.scrollY*0.1+30;
-=======
-        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.3+200;
-        this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
-
-        this.plantroncs.tilePositionX=this.cameras.main.scrollX*0.6+500;
-        this.plantroncs.tilePositionY=this.cameras.main.scrollY*0.1+30;
->>>>>>> parent of d4d2529 (changements)
-=======
-        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.3+200;
-        this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
-
-        this.plantroncs.tilePositionX=this.cameras.main.scrollX*0.6+500;
-        this.plantroncs.tilePositionY=this.cameras.main.scrollY*0.1+30;
->>>>>>> parent of 2faa5e4 (Merge branch 'main' of https://github.com/Corentin1998/projet-plateformer into main)
 
         this.planbuisson.tilePositionX=this.cameras.main.scrollX*0.8+500;
         this.planbuisson.tilePositionY=this.cameras.main.scrollY*0.1-15;
