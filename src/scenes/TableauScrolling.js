@@ -1,6 +1,6 @@
 class TableauScrolling extends Tableau{
 
-    preload() {
+  preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('ground', 'assets/ground.png');
@@ -202,7 +202,6 @@ class TableauScrolling extends Tableau{
         this.player.setDepth(10)
 
     }
-
     update(){
         super.update();
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
@@ -222,8 +221,8 @@ class TableauScrolling extends Tableau{
         this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+200;
         this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plantroncs.tilePositionX=this.cameras.main.scrollX*0.6+500;
-        this.plantroncs.tilePositionY=this.cameras.main.scrollY*0.1+30;
+        this.plantroncs1.tilePositionX=this.cameras.main.scrollX*0.6+500;
+        this.plantroncs1.tilePositionY=this.cameras.main.scrollY*0.1+30;
 
         this.planbuisson.tilePositionX=this.cameras.main.scrollX*0.8+500;
         this.planbuisson.tilePositionY=this.cameras.main.scrollY*0.1-15;
