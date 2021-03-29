@@ -9,8 +9,10 @@ class TableauScrolling extends Tableau{
         this.load.image('ciel', 'assets/ciel.png');
         this.load.image('plan-buisson', 'assets/plan-buisson.png');
         this.load.image('plan-buisson2', 'assets/plan-buisson2.png');
-        this.load.image('plan-troncs', 'assets/plan-troncs.png');
+        this.load.image('plan-troncs1', 'assets/plan-troncs1.png');
         this.load.image('plan-troncs2', 'assets/plan-troncs2.png');
+        this.load.image('plan-troncs3', 'assets/plan-troncs3.png');
+        this.load.image('plan-troncs4', 'assets/plan-troncs4.png');
         this.load.image('plan-feuilleshaut', 'assets/plan-feuilleshaut.png');
 
         // Plateformes
@@ -115,6 +117,27 @@ class TableauScrolling extends Tableau{
         this.ciel.setOrigin(0,0);
         this.ciel.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
 
+        this.plantroncs4=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'plan-troncs4'
+            );
+        this.plantroncs4.setScrollFactor(0);
+        this.plantroncs4.setOrigin(0,0);
+        this.plantroncs4.alpha=1;
+
+        this.plantroncs3=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'plan-troncs3'
+            );
+        this.plantroncs3.setScrollFactor(0);
+        this.plantroncs3.setOrigin(0,0);
+        this.plantroncs3.alpha=1;
 
         this.plantroncs2=this.add.tileSprite(
             0,
@@ -129,16 +152,17 @@ class TableauScrolling extends Tableau{
         //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
 
 
-        this.plantroncs=this.add.tileSprite(
+        this.plantroncs1=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            'plan-troncs'
+            'plan-troncs1'
             );
-        this.plantroncs.setScrollFactor(0);
-        this.plantroncs.setOrigin(0,0);
-        this.plantroncs.alpha=1;
+        this.plantroncs1.setScrollFactor(0);
+        this.plantroncs1.setOrigin(0,0);
+        this.plantroncs1.setDepth(10)
+        this.plantroncs1.alpha=1;
 
 
         this.planbuisson=this.add.tileSprite(
@@ -152,6 +176,17 @@ class TableauScrolling extends Tableau{
         this.planbuisson.setOrigin(0,0);
         this.planbuisson.alpha=1;
 
+        this.planbuisson2=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'plan-buisson2'
+            );
+        this.planbuisson2.setScrollFactor(0);
+        this.planbuisson2.setOrigin(0,0);
+        this.planbuisson2.setDepth(1)
+        this.planbuisson2.alpha=1;
 
         this.planfeuilleshaut=this.add.tileSprite(
             0,
@@ -178,11 +213,20 @@ class TableauScrolling extends Tableau{
         this.ciel.tilePositionY=this.cameras.main.scrollY*0.2;
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
 
-        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.3+200;
+        this.plantroncs4.tilePositionX=this.cameras.main.scrollX*0.3+300;
+        this.plantroncs4.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.plantroncs3.tilePositionX=this.cameras.main.scrollX*0.4+300;
+        this.plantroncs3.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+300;
         this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plantroncs.tilePositionX=this.cameras.main.scrollX*0.6+500;
-        this.plantroncs.tilePositionY=this.cameras.main.scrollY*0.1+30;
+        this.planbuisson2.tilePositionX=this.cameras.main.scrollX*0.5+300;
+        this.planbuisson2.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.plantroncs1.tilePositionX=this.cameras.main.scrollX*0.6+400;
+        this.plantroncs1.tilePositionY=this.cameras.main.scrollY*0.1+30;
 
         this.planbuisson.tilePositionX=this.cameras.main.scrollX*0.7+500;
         this.planbuisson.tilePositionY=this.cameras.main.scrollY*0.1-15;
