@@ -8,7 +8,6 @@ class TableauScrolling extends Tableau{
         // Différents plans
         this.load.image('ciel', 'assets/ciel.png');
         this.load.image('plan-buisson', 'assets/plan-buisson.png');
-        this.load.image('plan-buisson2', 'assets/plan-buisson2.png');
         this.load.image('plan-troncs1', 'assets/plan-troncs1.png');
         this.load.image('plan-troncs2', 'assets/plan-troncs2.png');
         this.load.image('plan-troncs3', 'assets/plan-troncs3.png');
@@ -174,17 +173,6 @@ class TableauScrolling extends Tableau{
         this.planbuisson.setOrigin(0,0);
         this.planbuisson.alpha=1;
 
-        this.planbuisson2=this.add.tileSprite(
-            0,
-            0,
-            this.sys.canvas.width,
-            this.sys.canvas.height,
-            'plan-buisson2'
-            );
-        this.planbuisson2.setScrollFactor(0);
-        this.planbuisson2.setOrigin(0,0);
-        this.planbuisson2.alpha=1;
-
         this.planfeuilleshaut=this.add.tileSprite(
             0,
             0,
@@ -215,10 +203,7 @@ class TableauScrolling extends Tableau{
         this.plantroncs3.tilePositionX=this.cameras.main.scrollX*0.3+300;
         this.plantroncs3.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.planbuisson2.tilePositionX=this.cameras.main.scrollX*0.5+300;
-        this.planbuisson2.tilePositionY=this.cameras.main.scrollY*0.5;
-
-        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+200;
+        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+300;
         this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
 
         this.plantroncs1.tilePositionX=this.cameras.main.scrollX*0.6+500;
