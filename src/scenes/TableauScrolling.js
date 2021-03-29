@@ -8,7 +8,9 @@ class TableauScrolling extends Tableau{
         // Différents plans
         this.load.image('ciel', 'assets/ciel.png');
         this.load.image('plan-buisson', 'assets/plan-buisson.png');
+        this.load.image('lumiere', 'assets/lumiere.png');
         this.load.image('plan-troncs1', 'assets/plan-troncs1.png');
+        this.load.image('lumiere2', 'assets/lumiere2.png');
         this.load.image('plan-troncs2', 'assets/plan-troncs2.png');
         this.load.image('plan-troncs3', 'assets/plan-troncs3.png');
         this.load.image('plan-troncs4', 'assets/plan-troncs4.png');
@@ -150,6 +152,16 @@ class TableauScrolling extends Tableau{
         this.plantroncs2.alpha=1;
         //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
 
+        this.lumiere2=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'lumiere2'
+            );
+        this.lumiere2.setScrollFactor(0);
+        this.lumiere2.setOrigin(0,0);
+        this.lumiere2.alpha=1;
 
         this.plantroncs1=this.add.tileSprite(
             0,
@@ -161,6 +173,17 @@ class TableauScrolling extends Tableau{
         this.plantroncs1.setScrollFactor(0);
         this.plantroncs1.setOrigin(0,0);
         this.plantroncs1.alpha=1;
+
+        this.lumiere=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'lumiere'
+            );
+        this.lumiere.setScrollFactor(0);
+        this.lumiere.setOrigin(0,0);
+        this.lumiere.alpha=1;
 
         this.planbuisson=this.add.tileSprite(
             0,
@@ -183,6 +206,7 @@ class TableauScrolling extends Tableau{
         this.planfeuilleshaut.setScrollFactor(0);
         this.planfeuilleshaut.setOrigin(0,0);
         this.planfeuilleshaut.alpha=1;
+        this.planfeuilleshaut.setDepth(11);
 
         //Profondeur des élements
         this.platforms.setDepth(10)
@@ -197,22 +221,28 @@ class TableauScrolling extends Tableau{
         this.ciel.tilePositionY=this.cameras.main.scrollY*0.2;
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
 
-        this.plantroncs4.tilePositionX=this.cameras.main.scrollX*0.2+300;
+        this.plantroncs4.tilePositionX=this.cameras.main.scrollX*0.2/*+300*/;
         this.plantroncs4.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plantroncs3.tilePositionX=this.cameras.main.scrollX*0.3+300;
+        this.plantroncs3.tilePositionX=this.cameras.main.scrollX*0.3;
         this.plantroncs3.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+300;
+        this.plantroncs2.tilePositionX=this.cameras.main.scrollX*0.5+100;
         this.plantroncs2.tilePositionY=this.cameras.main.scrollY*0.5;
 
-        this.plantroncs1.tilePositionX=this.cameras.main.scrollX*0.6+500;
+        this.lumiere2.tilePositionX=this.cameras.main.scrollX*0.6;
+        this.lumiere2.tilePositionY=this.cameras.main.scrollY*0.1-15;
+
+        this.plantroncs1.tilePositionX=this.cameras.main.scrollX*0.7;
         this.plantroncs1.tilePositionY=this.cameras.main.scrollY*0.1+30;
 
-        this.planbuisson.tilePositionX=this.cameras.main.scrollX*0.8+500;
+        this.lumiere.tilePositionX=this.cameras.main.scrollX*0.75;
+        this.lumiere.tilePositionY=this.cameras.main.scrollY*0.1-15;
+
+        this.planbuisson.tilePositionX=this.cameras.main.scrollX*0.8;
         this.planbuisson.tilePositionY=this.cameras.main.scrollY*0.1-15;
 
-        this.planfeuilleshaut.tilePositionX=this.cameras.main.scrollX*1+500;
+        this.planfeuilleshaut.tilePositionX=this.cameras.main.scrollX*1;
         this.planfeuilleshaut.tilePositionY=this.cameras.main.scrollY*0.1;
 
     }
