@@ -7,13 +7,16 @@ class Souris extends ObjetEnnemi{
      */
     constructor(scene, x, y) {
         super(scene, x, y, "souris");
-        //pas de gravité
-        this.body.allowGravity=false;
+        scene.add.existing(this)
+        scene.physics.add.existing(this)
 
-        //gestion de la taille
-        this.setDisplaySize(62,40);
+        //Taille
+        this.setDisplaySize(41,29);
         this.body.setMaxVelocityX(10)
         this.setVelocityX(-10);
+
+        //Gravité
+        this.body.allowGravity=false;
 
         //on réduit un peu la zone de hit
         this.setBodySize(this.body.width,this.body.height);
@@ -25,15 +28,15 @@ class Souris extends ObjetEnnemi{
         // X
 
         this.setCollideWorldBounds(true);
-        this.setBounce(1);
+        //this.setBounce(1);
         this.setVelocityX(20);
 
         //on fait apparaitre notre objet avec un petit delay, puis on lance l'animation
         //ceci a pour effet de décaler les animations pour ce même objet
 
         this.originalX=x;
-        this.minX=x-400;
-        this.maxX=x+800;
+        this.minX=x-100;
+        this.maxX=x+320;
 
         // on applique les propriété du début de l'animation
         this.x=this.minX;
@@ -42,9 +45,52 @@ class Souris extends ObjetEnnemi{
 
         //on fait apparaitre notre objet avec un petit delay, puis on lance l'animation
         //ceci a pour effet de décaler les animations pour ce même objet
+        
         scene.tweens.add({
+            targets:this,
+            duration:200,
+            delay:Math.random()*1000,
+            alpha:{
+                startDelay:Math.random()*5000,
+                from:0,
+                to:1,
+            },
+            onComplete: function () {
+                me.start();
+            }
+        })
+
+}
+
+start(){
+    this.scene.tweens.add({
+        targets: this,
+        x: {
+            from: this.minX,
+            to:this.maxX,
+            duration: 10*1000,
+            ease: 'Sine.easeInOut',
+            yoyo: -1,
+            repeat:-1,
+            flipX:true,
+        },
+        y: {
+            from: this.minY,
+            to:this.maxY,
+            duration: 500,
+            ease: 'Sine.easeInOut',
+            yoyo: -1,
+            repeat:-1
+        }
+    });
+}
+
+}
+        
+        
+        /*scene.tweens.add({
                 targets:this,
-                duration:5000,
+                duration:0,
                 delay:Math.random()*1000,
                 alpha:{
                     startDelay:Math.random()*5000,
@@ -85,7 +131,7 @@ class Souris extends ObjetEnnemi{
         }
 
     }
-}
+}*/
 
 
 

@@ -75,26 +75,35 @@ class TableauScrolling extends Tableau{
         this.platforms.create(1232, 428, 'platform-md').setScale(1).refreshBody();
 
         this.platforms.create(1568, 428, 'ground').setScale(1).refreshBody();
-        this.platforms.create(1550, 230, 'platform').setScale(1).refreshBody();
-        this.platforms.create(1815, 270, 'platform').setScale(1).refreshBody();
+        this.platforms.create(1550, 210, 'platform').setScale(1).refreshBody();
+        this.platforms.create(1815, 250, 'platform').setScale(1).refreshBody();
         this.platforms.create(2016, 428, 'ground').setScale(1).refreshBody();
         this.platforms.create(2464, 428, 'ground').setScale(1).refreshBody();
         this.platforms.create(2912, 428, 'ground').setScale(1).refreshBody();
         this.platforms.create(2500, 280, 'platform').setScale(1).refreshBody();
         this.platforms.create(2720, 180, 'platform').setScale(1).refreshBody();
-        this.platforms.create(2960, 280, 'platform').setScale(1).refreshBody();
+        this.platforms.create(2940, 280, 'platform').setScale(1).refreshBody();
 
         // Ennemis
-        new Squirrel(this,550,371);
+        new Squirrel(this,550,365);
+        new Souris(this,1008,294);
         new Squirrel(this,2200,365);
-        new Souris(this,2720,365);
+        //new Souris(this,2720,371);
 
         //Étoiles
         this.stars.create(350,0,"star");
         this.stars.create(390,0,"star");
         this.stars.create(430,0,"star");
+
+        this.stars.create(960,0,"star");
+        this.stars.create(1040,0,"star");
         this.stars.create(1120,0,"star");
+        this.stars.create(1200,0,"star");
+        this.stars.create(1280,0,"star");
+
+        this.stars.create(1775,0,"star");
         this.stars.create(1815,0,"star");
+        this.stars.create(1855,0,"star");
         this.stars.create(2500,0,"star");
         this.stars.create(2720,0,"star");
         this.stars.create(2960,0,"star");

@@ -10,13 +10,15 @@ class Squirrel extends ObjetEnnemi{
         scene.add.existing(this)
         scene.physics.add.existing(this)
 
-        //gestion de la taille
-        this.setDisplaySize(32,48);
+        //Taille
+        this.setDisplaySize(40,60);
 
         //on réduit un peu la zone de hit
         this.setBodySize(this.body.width,this.body.height);
         this.setOffset(0, 0);
         this.setDepth(10);
+
+
         this.setCollideWorldBounds(true);
         this.setBounce(1);
         this.setVelocityY(10);
