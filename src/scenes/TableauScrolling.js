@@ -85,9 +85,9 @@ class TableauScrolling extends Tableau{
         this.platforms.create(2960, 280, 'platform').setScale(1).refreshBody();
 
         // Ennemis
-        new Souris(this,550,371);
+        new Squirrel(this,550,371);
         new Squirrel(this,2200,365);
-        new Squirrel(this,2720,365);
+        new Souris(this,2720,365);
 
         //Étoiles
         this.stars.create(350,0,"star");
